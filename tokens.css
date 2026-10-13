@@ -1,0 +1,31 @@
+/* 1. DESIGN TOKENS: single source of truth taken from the Week 2 style guide */
+:root {
+  --color-indigo: #26336b;
+  --color-terracotta: #b4502f;
+  --color-cream: #faf4e8;
+  --color-sand: #f1e6d0;
+  --color-charcoal: #2b2b2b;
+  --color-muted: #5f5a52;
+  --color-forest: #2f6b4f;
+  --color-border: #cfc8ba;
+  --color-surface: #ffffff;
+
+  --font-heading: "Lora", Georgia, "Times New Roman", serif;
+  --font-body: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+  --fs-h1: clamp(1.5rem, 1.1rem + 1.8vw, 2rem);   /* 24px -> 32px */
+  --fs-h2: clamp(1.25rem, 1rem + 1vw, 1.5rem);    /* 20px -> 24px */
+  --fs-body: 1rem;                                 /* 16px */
+  --fs-small: 0.875rem;                            /* 14px */
+
+  --space-1: 0.5rem;  /* 8px  */
+  --space-2: 1rem;    /* 16px */
+  --space-3: 1.5rem;  /* 24px */
+  --space-4: 2rem;    /* 32px */
+  --space-6: 3rem;    /* 48px */
+
+  --radius-control: 4px;
+  --radius-card: 8px;
+  --container-max: 75rem;  /* 1200px */
+  --tap-min: 2.75rem;      /* 44px minimum touch target */
+}

@@ -1,0 +1,18 @@
+/* 2. BASE: reset + element defaults (mobile-first) */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 4rem; }
+body {
+  margin: 0; font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.5;
+  color: var(--color-charcoal); background: var(--color-surface);
+  padding-bottom: 3.5rem; /* room for the mobile tab bar */
+}
+img { max-width: 100%; height: auto; display: block; }
+h1, h2, h3 { font-family: var(--font-heading); color: var(--color-indigo); line-height: 1.2; margin: 0 0 var(--space-1); }
+h1 { font-size: var(--fs-h1); } h2 { font-size: var(--fs-h2); } h3 { font-size: 1.125rem; font-family: var(--font-body); font-weight: 500; }
+p { margin: 0 0 var(--space-2); }
+a { color: var(--color-terracotta); }
+:focus-visible { outline: 2px solid #1a73e8; outline-offset: 2px; }
+.skip-link { position: absolute; left: -999px; top: 0; background: var(--color-indigo); color: #fff; padding: var(--space-1) var(--space-2); z-index: 100; }
+.skip-link:focus { left: 0; }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }

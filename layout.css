@@ -1,0 +1,25 @@
+/* 3. LAYOUT: container, page sections, grids */
+.container { width: 100%; max-width: var(--container-max); margin-inline: auto; padding-inline: var(--space-2); }
+.section { padding-block: var(--space-4); }
+.section__title { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: var(--space-2); }
+
+/* Product grid: 2 -> 3 -> 4 columns */
+.grid-products { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-2); list-style: none; margin: 0; padding: 0; }
+@media (min-width: 48em)  { .grid-products { grid-template-columns: repeat(3, 1fr); gap: var(--space-3); } }
+@media (min-width: 75em)  { .grid-products { grid-template-columns: repeat(4, 1fr); } }
+
+/* Modifier: featured rows with exactly four items stay balanced on tablet */
+@media (min-width: 48em) { .grid-products--featured { grid-template-columns: repeat(4, 1fr); gap: var(--space-2); } }
+
+/* Category tiles: swipe row on mobile -> grid on larger screens */
+.grid-categories { display: flex; gap: var(--space-2); overflow-x: auto; scroll-snap-type: x mandatory; list-style: none; margin: 0; padding: 0 0 var(--space-1); }
+.grid-categories > li { flex: 0 0 5.5rem; scroll-snap-align: start; }
+@media (min-width: 48em)  { .grid-categories { display: grid; grid-template-columns: repeat(5, 1fr); overflow: visible; } .grid-categories > li { flex: none; } }
+
+/* Two-column feature (brand story) */
+.split { display: grid; gap: 0; border-radius: var(--radius-card); overflow: hidden; background: var(--color-sand); }
+@media (min-width: 48em) { .split { grid-template-columns: 1fr 1.4fr; align-items: stretch; } }
+
+/* Footer link groups */
+.footer__grid { display: grid; gap: var(--space-3); grid-template-columns: 1fr 1fr; }
+@media (min-width: 75em) { .footer__grid { grid-template-columns: 2fr repeat(4, 1fr); } }
